@@ -25,7 +25,7 @@
             <div class="navlinks flex visibility">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Home</a></li>
-                    <li><a href="#" class="hover-link">Recipes</a></li>
+                    <li><a href="Recipes/recipe.html" class="hover-link">Recipes</a></li>
                     <li><a href="#" class="hover-link">About Us</a></li>
                     <li><a href="#" class="hover-link">Contact Us</a></li>
                     <li><a href="#" class="hover-link secondary-button">My List</a></li>
@@ -50,15 +50,15 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa itaque quod quaerat molestias omnis nobis similique obcaecati harum repudiandae! Repudiandae? 
             </p> 
         </div> 
-        <div class="header-right"> 
+        <div class="header-right float-img"> 
             <div class="hero-image">
-                <img src="https://source.unsplash.com/600x600/?indian%20food" alt="hero_image" class="newimg">
+                <img src="assets/2.jpg" alt="hero_image" class="newimg">
             </div>
         </div>
     </header>
 
     <!-- Scroll icon --> 
-    <section class="scroll-icon">
+    <section class="scroll-icon"> 
         <a href="#ingredients">
             <div class="scroll-down"></div>
         </a>
@@ -67,7 +67,7 @@
     <!-- main working ingredients section -->
             
         <section class="ingredients flex" id="ingredients"> 
-            <h2>Ingredients</h2> 
+            <h2>Choose a category of your ingredient:</h2> 
             <br> 
             <div class="wrapper">
                 <div class="categories">
@@ -118,11 +118,70 @@
                         <i class="fa-solid fa-magnifying-glass fa-xl"></i>
                     </button>
                 </form>
+            </div> 
+
+            <!-- find a recipe button --> 
+            <div class="find-button">
+                <a href="#" class="hover-link primary-button find-btn">FIND A RECIPE! &emsp; &ensp;<i class="fa-solid fa-angle-right fa-xl"></i></a> 
             </div>
         </section>
         
-        <footer class=""></footer>
+        <!-- footer -->
+        <footer class="footer"> 
+            <div class="container">
+                <div class="footer-row flex">
+                    <div class="footer-column footcol1 flex">
+                        <img src="assets/logo-white.png" alt="company_logo" width="100px" height="100px"> 
+                        <h2 class="logo-text">Swäd Sutra</h2>
+                    </div> 
+                    <div class="footer-column footcol2">
+                        <h4>Sitemap</h4>
+                        <ul>
+                            <li><a href="#">Ingredient Based Search</a></li>
+                            <li><a href="#">Recipes</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div> 
+                    <div class="footer-column footcol3">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">User guides</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column footcol4">
+                        <h4>Subscribe to our FREE Newsletter</h4> 
+                        <p>To get delicious recipe recommendations directly in your inbox!</p> 
+                        <div class="emailbar">
+                            <form action="" class="emailbox flex">
+                                <input type="email" placeholder="Enter your email id" name="emailinput"> 
+                                <button type="submit">
+                                    Subscribe
+                                </button>
+                            </form> 
+                        </div> 
+                        <p>We promise not to spam your inbox!</p>
+                    </div>
+                </div> 
+            </div>
+        </footer>
         
+        <footer class="subfooter-1 flex">
+            <div class="social-links"> 
+                <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i> </a>
+                <a href="#"><i class="fa-brands fa-youtube"></i> </a> 
+            </div>
+            <div class="language">
+                    <select name="language" id="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+            </div>
+        </footer>
     <script src="resp.js"></script>
     </body>
     </html>
