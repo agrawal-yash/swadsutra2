@@ -45,6 +45,10 @@ h3 {
     font-size: 1.5rem;
 } 
 
+h4 {
+    font-size: 1.2rem;
+}
+
 p {
     font-family: 'Roboto',sans-serif; 
     font-size: 1.2rem; 
@@ -63,7 +67,6 @@ ul {
     list-style: none;
 } 
 
-
 /* utility classes */ 
 
 .small-bold-text {
@@ -79,12 +82,13 @@ ul {
 
 .hover-link {
     color: var(--primary-text-color); 
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; 
 
 }
 
 .hover-link:hover {
     color: var(--accent-color); 
+    font-weight: 500;
 } 
 
 .primary-button { 
@@ -128,11 +132,11 @@ ul {
     
 } 
 
-
 /* .navbar {
     position: sticky; 
     top:0;
-} */
+} */ 
+
 .logo {
     flex-basis: 30%; 
     justify-content: left;
@@ -160,6 +164,10 @@ ul {
     flex-direction: row;
     gap: 40px; 
 } 
+
+#home:focus {
+    color: var(--accent-color);
+}
 
 .burger {
     display: none;
@@ -200,7 +208,24 @@ ul {
     width: 300px; 
     display: block; 
     margin: auto;
+} 
+
+.float-img {
+	animation-name: floating;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
 }
+
+@keyframes floating {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 10px); }
+	100% { transform: translate(0, -0px); }
+}
+
+
 
 
 /* scroll icon  */ 
@@ -263,7 +288,7 @@ ul {
 
 .ingredients {
     height: 100vh; 
-    background-color:blanchedalmond; 
+    background-color: #fef5da; 
     flex-direction: column;
 } 
 
@@ -307,28 +332,28 @@ ul {
 
 
 .img1 {
-    background-color: var(--secondary-text-color); 
+    background-image: url(assets/1.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 
 .img2 {
-    background-color: var(--secondary-text-color); 
+    background-image: url(assets/3.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img3 {
-    background-color: var(--secondary-text-color); 
+    background-image: url(assets/4.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img4 {
-    background-color: var(--secondary-text-color); 
+    background-image: url(assets/5.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img5 {
-    background-color: var(--secondary-text-color); 
+    background-image: url(assets/6.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
@@ -364,9 +389,16 @@ ul {
     width: 100%; 
     max-width: 70%; 
     background-color: rgba(255, 255, 255, 0.3); 
+    border: solid var(--accent-color) 0.2px;
     border-radius: 60px; 
-    padding: 20px 20px; 
-    backdrop-filter: blur(4px) saturate(180%);
+    padding: 10px 20px; 
+    backdrop-filter: blur(4px) saturate(180%); 
+} 
+
+/* not working */
+.searchform:focus { 
+    border: solid var(--accent-color-dark) 0.2px; 
+
 }
 
 .searchform input {
@@ -399,6 +431,188 @@ ul {
     border-radius: 50%;
     background-color: var(--accent-color);  
 }
+
+.find-button {
+    padding: 0 0; 
+    border-radius: 40px;
+
+}
+
+.find-btn {
+    padding: 20px 60px; 
+    font-size: 1.2rem; 
+    border-radius: 40px;
+
+}
+
+
+
+/* footer */ 
+
+.container {
+    max-width: 99%; 
+    background-color: #24262b; 
+    margin: auto;
+}
+
+
+
+.footer-row {
+    flex-wrap: wrap; 
+
+}
+
+.footer-column {
+    width: 5%; 
+    padding: 0 2%;  
+}
+
+.footer-column h4 {
+    color: white; 
+    margin-bottom: 5%; 
+    position: relative;
+} 
+
+.footer-column h4::before {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -3px; 
+    background-color: red; 
+    height: 2px; 
+    box-sizing: border-box; 
+    width: 65px;
+} 
+
+.footer-column ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a { 
+    text-decoration: none; 
+    color: #ffffff; 
+    color: #bbbbbb; 
+    display: block; 
+    transition: all 0.3s ease;
+} 
+
+.footer-column ul li a:hover {
+    color: white; 
+    padding-left: 10px;
+}
+
+.footer {
+    background-color: #24262b; 
+    padding: 2% 0; 
+    font-size: 0.9rem;
+} 
+
+.footcol1 {
+    width: 15%;
+} 
+.footcol2 {
+    width: 15%;
+} 
+.footcol3 {
+    width: 15%;
+}
+
+.footcol4 {
+    width: 35%; 
+} 
+
+.footcol4 p {
+    font-size: 0.8rem; 
+    color: #bbbbbb; 
+    font-family: 'Poppins',sans-serif; 
+} 
+
+.footer-row .logo-text {
+    color: #ffffff; 
+    padding-left: 10px;
+}
+
+.emailbar {
+    width: 100%; 
+    min-height: 5vh; 
+    padding: 0px 0px; 
+
+}
+
+.emailbox {
+    width: 100%; 
+    max-width: 100%; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: solid #bbbbbb 0.2px;
+    border-radius: 5px; 
+    padding-left: 4px; 
+    backdrop-filter: blur(4px) saturate(180%); 
+} 
+
+
+.emailbox input {
+    background: transparent; 
+    flex: 1; 
+    border: 0; 
+    outline: none; 
+    padding: 02px 2px; 
+    color: white; 
+    font-size: 1.2rem; 
+    font-weight: 500;
+}
+
+::placeholder {
+    color: #bbbbbb;
+    opacity: 0.8; 
+    font-size: 1rem;
+}
+
+.emailbox button {
+    width: 100px; 
+    height: 33px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.emailbox button {
+    border: 0; 
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    background-color: var(--accent-color);  
+}
+
+/* subfooter */ 
+.subfooter-1 {
+    background-color:crimson; 
+    justify-content: space-between; 
+    padding: 0px 10px;
+}
+
+.subfooter-1 .social-links a {
+    display: inline-block; 
+    height: 40px; 
+    width: 40px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    margin: 10px 10px 10px 0px; 
+    text-align: center; 
+    line-height: 40px; 
+    border-radius: 50%; 
+    color: white; 
+    transition: all 0.3s ease; 
+}
+
+.subfooter-1 .social-links a:hover {
+    color: #24262b; 
+    background-color: white;
+} 
+
+#language {
+    width: 100px; 
+    border: 0;
+    font-family: "Poppins",sans-serif;
+}
+
 
 
 
@@ -466,5 +680,16 @@ ul {
     } 
     .header-left {
         width: 100%;
+    }  
+
+    .footer-column {
+        width: 40%; 
+        margin-bottom: 30px;  
     }
+} 
+
+@media (max-width: 800px) {
+.footer-column {
+    width: 100%;
+}
 } 
