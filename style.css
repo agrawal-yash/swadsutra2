@@ -41,6 +41,14 @@ h2 {
     font-size: 2rem;
 } 
 
+.h2 { 
+    font-family: 'Poppins', sans-serif; 
+    color: var(--primary-text-color); 
+    font-size: 2rem; 
+    font-weight: 500;
+
+} 
+
 h3 {
     font-size: 1.5rem;
 } 
@@ -123,6 +131,9 @@ ul {
 
 
 
+/* HOME.HTML PAGE */
+
+
 /* nav bar */ 
 .mainnav {
     justify-content: space-between; 
@@ -146,6 +157,7 @@ ul {
     font-family: 'Amita', sans-serif; 
     color: #402419; 
     font-weight: 700; 
+    padding-right: 20px;
 }
 
 
@@ -230,67 +242,115 @@ ul {
 
 /* scroll icon  */ 
 
-.scroll-icon {
-    min-height: 20vh; 
-    width: 100%; 
-    background-color: #fef5da;
+#section-1 {
+  background-color: #fef5da; 
+  height: 10vh; 
 }
+a#scroll-btn {
+  position: absolute;
+  height: 7%;
+  width: 2%;
+  border: 2px solid var(--accent-color-dark);
+  margin: auto;
+  left: 0;
+  right: 0;
+  /* bottom: 6.25em; */
+  border-radius: 60px;
+}
+a#scroll-btn:before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  /* top: 1.2em; */
+  height: 30%;
+  width: 50%;
+  background-color: var(--accent-color-dark);
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+/* a#scroll-btn:after {
+  position: absolute;
+  content: "SCROLL DOWN";
+  width: 12em;
+  display: block;
+  width: 12em;
+  text-align: center;
+  left: -4.2em;
+  bottom: -2.5em;
+  font-size: 1.6em;
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-weight: 600;
+} */
 
-.scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
+@media screen and (max-width: 500px) {
+  a#scroll-btn {
+    font-size: 12px;
   }
-  .scroll-down::before,
-  .scroll-down::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
-  }
-  .scroll-down::before {
-    top: 30%;
-    animation-delay: 0.3s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
-  }
-  
-  @keyframes scroll-down {
-    0% {
-      /* top:20%; */
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      top: 90%;
-      opacity: 0;
-    }
-  }
+} 
+
+
+
 
 
 /* ingredients section  */
 
 .ingredients {
-    height: 100vh; 
+    height: 80vh; 
     background-color: #fef5da; 
-    flex-direction: column;
+    flex-direction: column; 
 } 
+
+.ingredient{
+    flex-direction: row; 
+    height: 20vh; 
+    background-color: #fef5da;
+    justify-content: space-between; 
+    flex-direction: row;
+} 
+
+.ingredients-text{
+    flex-basis: 90%; 
+    justify-content: center; 
+    padding-left: 11%;
+} 
+
+.list-icon {
+    flex-basis: 10%; 
+    justify-content: center; 
+    padding-right: 3%; 
+    flex-direction: column; 
+    align-items: center; 
+} 
+
+.list-icon a{
+    color: var(--accent-color-dark);  
+    flex-direction: column; 
+} 
+
+.list-icon i{
+    padding-bottom: 15%;
+}
+
+.list-icon a:hover{
+    color: var(--accent-color); 
+}
+
+
+
+
+
 
 /* CARDS */  
 .wrapper {
@@ -332,28 +392,28 @@ ul {
 
 
 .img1 {
-    background-image: url(assets/1.jpg); 
+    background-image: url(assets/veggies-crop-compressed.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 
 .img2 {
-    background-image: url(assets/3.jpg); 
+    background-image: url(assets/lentils-crop-compressed.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img3 {
-    background-image: url(assets/4.jpg); 
+    background-image: url(assets/grains-compressed.jpg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img4 {
-    background-image: url(assets/5.jpg); 
+    background-image: url(assets/dairy-compressed.jpeg); 
     background-size: cover; 
     background-position: center center;
 } 
 .img5 {
-    background-image: url(assets/6.jpg); 
+    background-image: url(assets/bakery-compressed.jpeg); 
     background-size: cover; 
     background-position: center center;
 } 
@@ -385,6 +445,11 @@ ul {
 
 }
 
+.searchform input::placeholder{
+    color: rgba(105, 153, 32, 0.9); 
+}
+
+
 .searchform {
     width: 100%; 
     max-width: 70%; 
@@ -396,10 +461,10 @@ ul {
 } 
 
 /* not working */
-.searchform:focus { 
+/* .searchform:focus { 
     border: solid var(--accent-color-dark) 0.2px; 
 
-}
+} */
 
 .searchform input {
     background: transparent; 
@@ -412,11 +477,6 @@ ul {
     font-weight: 500;
 }
 
-::placeholder {
-    color: var(--secondary-text-color);
-    opacity: 0.8; 
-    font-size: 1.2rem;
-}
 
 .searchform button i{
     width: 60px; 
@@ -577,9 +637,11 @@ ul {
 
 .emailbox button {
     border: 0; 
-    border-top-right-radius: 5px; 
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
     background-color: var(--accent-color);  
+    font-family: 'Poppins', sans-serif; 
+    cursor:pointer; 
 }
 
 /* subfooter */ 
@@ -611,7 +673,253 @@ ul {
     width: 100px; 
     border: 0;
     font-family: "Poppins",sans-serif;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RECIPES.HTML PAGE */ 
+
+.mainpage{
+    background-color: #fef5da;
 }
+
+/* filters */
+
+.filters{
+    flex-basis: 25%; 
+    accent-color: var(--secondary-text-color); 
+    color: black; 
+}
+
+.filters .checked{
+    color: orange;
+}
+
+.filters .clear-all-btn{
+    text-align: center;
+}
+
+.filters tr{
+    text-align: left;
+} 
+
+.filters td{
+    font-size: 0.9rem;
+} 
+
+.filters th{
+    font-size: 1.1rem;
+}
+
+.filters hr{
+    margin: 10px 0px; 
+    height: 1px;
+    background-color: var(--primary-text-color);
+    border: none;
+} 
+
+.filter-icon{
+    top: 26px; 
+    left: 118px; 
+    width: 24px; 
+    height: 24px; 
+    fill: pink;
+}
+
+
+
+/* recipe search bar */ 
+
+.recipe-searchbar {
+    width: auto; 
+    padding: 2% 0px; 
+    padding-left: 30px; 
+
+}
+
+.recipe-searchform input::placeholder{
+    color: rgba(105, 153, 32, 0.9); 
+}
+
+
+.recipe-searchform {
+    width: 80%; 
+    max-width: 80%; 
+    background-color: transparent; 
+    border: solid var(--accent-color) 1px; 
+    border-radius: 30px; 
+    padding: 2px 5px; 
+    backdrop-filter: blur(4px) saturate(80%); 
+} 
+
+.recipe-searchform input {
+    background: transparent; 
+    flex: 1; 
+    border: 0; 
+    outline: none; 
+    border-radius: 30px; 
+    justify-content: center;
+    padding: 10px 10px; 
+    color: var(--primary-text-color); 
+    font-size: 1.3rem; 
+    font-weight: 500;
+} 
+
+.recipe-searchform input::placeholder{
+    justify-content: center;
+}
+
+
+.recipe-searchform button i{
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.recipe-searchform button {
+    border: 0; 
+    border-radius: 50%;
+    background-color: transparent;  
+}
+
+
+/* sort by  */
+.sort-options{
+    text-align:right; 
+    justify-content: space-between; 
+    padding: 0px 30px; 
+    color: black;
+
+
+} 
+
+#sort-list {
+    width: 100px; 
+    border: 0;
+    font-family: "Poppins",sans-serif;
+} 
+
+
+
+
+/* cards search result */
+
+.search-result{
+    flex-basis: 75%; 
+    background-color:#fef5da; 
+    flex-direction: row;
+} 
+
+#results-cards{
+    padding: 0px 0; 
+}
+
+
+.cards-wrapper{
+    padding: 10px 10px; 
+    /* background-color: darkkhaki;  */
+} 
+
+.cardbox-area{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 300px); 
+    grid-column-gap: 20px; 
+    grid-row-gap: 50px;
+    justify-content: center; 
+    padding: 30px 0px;
+    /* background-color: pink; */
+} 
+
+.cardbox{
+    border-radius: 10px; 
+    position: relative; 
+    overflow: hidden; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); 
+}
+
+.cardbox img {
+    width: 100%; 
+    border-radius: 10px; 
+    display: block; 
+    transition: transform 0.4s ;
+}
+
+.cards-overlay{
+    height: 0; 
+    width: 100%; 
+    background: linear-gradient(transparent, #1c1c1c 50%);
+    border-radius: 10px; 
+    position: absolute; 
+    left: 0px; 
+    bottom: 0; 
+    overflow: hidden; 
+    flex-direction: column; 
+    padding: 0; 
+    text-align: center; 
+    font-size: 12px; 
+    transition: height 0.4s; 
+} 
+
+
+.cards-overlay h3{
+    font-size: 1.5rem;
+    margin-bottom: 5px; 
+    margin-top: 10%; 
+    color: white;
+} 
+
+.cards-overlay a{
+    border-radius: 50px; 
+    width: 60px; 
+    height: 15px !important;
+    font-size: 0.8rem;  
+    margin-top: 10px;
+    background-color: transparent;
+} 
+
+.cards-overlay p{
+    font-family: 'Poppins',sans-serif; 
+    font-size: 1rem; 
+    color: white;
+}
+
+
+.cardbox:hover img{
+    transform: scale(1.3); 
+}
+
+.cardbox:hover .cards-overlay{
+    height: 100%; 
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
 
 
 

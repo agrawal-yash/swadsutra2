@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swaad Sutra - Cook food with ingredients available at your home! </title> 
+    <title>Swad Sutra - Cook food with ingredients available at your home! </title> 
     <!-- icons library -->
     <!-- <script src="https://kit.fontawesome.com/55414edd7e.js" crossorigin="anonymous"></script>  --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
@@ -16,16 +16,16 @@
     <div class="mainnav flex nav-height"> 
 
         <div class="logo flex">
-            <a href="#" class="logo-link"> 
+            <a href="index.html" class="logo-link"> 
                 <img src="assets/logo.png" alt="company_logo"> 
             </a> 
-            <h2 class="logo-text">Swäd Sutra</h2>
+            <h2 class=""> <a href="index.html" class="logo-text">Swäd Sutra</a></h2> 
             </div>
     
             <div class="navlinks flex visibility">
                 <ul class="flex">
-                    <li><a href="#" class="hover-link">Home</a></li>
-                    <li><a href="Recipes/recipe.html" class="hover-link">Recipes</a></li>
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li><a href="recipes.html" class="hover-link">Recipes</a></li>
                     <li><a href="#" class="hover-link">About Us</a></li>
                     <li><a href="#" class="hover-link">Contact Us</a></li>
                     <li><a href="#" class="hover-link secondary-button">My List</a></li>
@@ -44,7 +44,8 @@
     <header class="hero flex">
         <div class="header-left flex">
             <h2>
-                Lorem ipsum dolor sit amet consectetur 
+                Lore
+                m ipsum dolor sit amet consectetur 
             </h2> 
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa itaque quod quaerat molestias omnis nobis similique obcaecati harum repudiandae! Repudiandae? 
@@ -52,23 +53,33 @@
         </div> 
         <div class="header-right float-img"> 
             <div class="hero-image">
-                <img src="assets/2.jpg" alt="hero_image" class="newimg">
+                <img src="assets/hero-resized.jpeg" alt="hero_image" class="newimg">
             </div>
         </div>
     </header>
 
     <!-- Scroll icon --> 
-    <section class="scroll-icon"> 
-        <a href="#ingredients">
-            <div class="scroll-down"></div>
-        </a>
-    </section>
+    <section id="section-1" class="flex">
+        <a id="scroll-btn" href="#ingredient"></a>
+      </section>
     
     <!-- main working ingredients section -->
             
-        <section class="ingredients flex" id="ingredients"> 
-            <h2>Choose a category of your ingredient:</h2> 
-            <br> 
+        
+             
+            <section class="ingredient flex" id="ingredient">
+                <div class="ingredients-text flex">
+                    <h2>                    Choose a category of your ingredient:</h2>   
+                </div>
+                <div class="list-icon flex">
+                    <a href="#" class="">
+                        <i class="fa-solid fa-list-check fa-xl flex"></i> 
+                        <h4>My List</h4>
+                    </a> 
+                </div>
+            </section>
+            <section class="ingredients flex" id="ingredients"> 
+            <!-- <br>  -->
             <div class="wrapper">
                 <div class="categories">
                     <a href="#"> 
@@ -106,14 +117,15 @@
                             </span>
                         </span>
                     </a>
-                </div>
+                </div> 
             </div>
-            <br>
-            <h3>or</h3> 
+            <!-- <br> -->
+            <h4 style="padding-top: 15px;"><a href="#" class="hover-link" style=" font-weight: 500; font-size: 1.2rem;">See all categories ></a></h4>
+            <h2>or</h2> 
             <!-- search bar --> 
             <div class="searchbar flex">
                 <form action="" class="searchform flex">
-                    <input type="text" placeholder="Search for your ingredient here" name="searchinput"> 
+                    <input type="text" placeholder="Search for your ingredient" name="searchinput"> 
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass fa-xl"></i>
                     </button>
@@ -127,7 +139,7 @@
         </section>
         
         <!-- footer -->
-        <footer class="footer"> 
+        <footer class="footer" id="footer"> 
             <div class="container">
                 <div class="footer-row flex">
                     <div class="footer-column footcol1 flex">
@@ -157,7 +169,7 @@
                         <div class="emailbar">
                             <form action="" class="emailbox flex">
                                 <input type="email" placeholder="Enter your email id" name="emailinput"> 
-                                <button type="submit">
+                                <button type="submit" class="primary-button">
                                     Subscribe
                                 </button>
                             </form> 
@@ -175,7 +187,7 @@
                 <a href="#"><i class="fa-brands fa-x-twitter"></i> </a>
                 <a href="#"><i class="fa-brands fa-youtube"></i> </a> 
             </div>
-            <div class="language">
+            <div class="language flex"> 
                     <select name="language" id="language">
                         <option value="English">English</option>
                         <option value="Hindi">Hindi</option>
