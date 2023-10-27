@@ -1,4 +1,5 @@
- // Function to retrieve query parameters from URL
+
+// Function to retrieve query parameters from URL
  function getQueryVariable(variable) {
     const query = window.location.search.substring(1);
     const vars = query.split('&');
@@ -414,20 +415,26 @@
     }
    ]
 
-   const matchingRecipes = data.filter(recipe => {
-    return areArraysEqual(ingredients, recipe.ingredients);
-  });
+  //  const matchingRecipes = data.filter(recipe => {
+  //   return areArraysEqual(ingredients, recipe.ingredients);
+  // });
 
-  displayRecipes(matchingRecipes);
+  
+  // function areArraysEqual(arr1, arr2) {
+    //   if (arr1.length !== arr2.length) {
+      //     return false;
+      //   }
+  //   arr1.sort();
+  //   arr2.sort();
+  //   return arr1.every((element, index) => element === arr2[index]);
+  // }
 
-  function areArraysEqual(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
-      return false;
-    }
-    arr1.sort();
-    arr2.sort();
-    return arr1.every((element, index) => element === arr2[index]);
-  }
+  const matchingRecipes = data.filter((recipe) =>
+  recipe.ingredients.every((ingredient) => ingredients.includes(ingredient))
+);
+
+
+      displayRecipes(matchingRecipes);
 
    function displayRecipes(recipes) {
     const recipeList = document.getElementById('result-cards');
